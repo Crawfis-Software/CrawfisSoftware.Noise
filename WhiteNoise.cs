@@ -1,5 +1,8 @@
 ﻿namespace CrawfisSoftware.Noise
 {
+    /// <summary>
+    /// Class to sample white noise.
+    /// </summary>
     public class WhiteNoise
     {
         private readonly System.Random _random;
@@ -11,6 +14,12 @@
         private int _maxRandomValue;
         private float _scaleFactor;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="random">A random generator instance.</param>
+        /// <param name="minRandomValue">The minimum value for the white noise. All random integer values are clamped to this.</param>
+        /// <param name="maxRandomValue">The maximum value for the white noise. All random integer values are clamped to this.</param>
         public WhiteNoise(System.Random random, int minRandomValue = 0, int maxRandomValue = int.MaxValue-1)
         {
             _random = random;
@@ -27,6 +36,11 @@
             }
         }
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="minRandomValue">The minimum value for the white noise. All random integer values are clamped to this.</param>
+        /// <param name="maxRandomValue">The maximum value for the white noise. All random integer values are clamped to this.</param>
         public WhiteNoise(int minRandomValue = 0, int maxRandomValue = int.MaxValue) : this(new System.Random(), minRandomValue, maxRandomValue) { }
 
 
