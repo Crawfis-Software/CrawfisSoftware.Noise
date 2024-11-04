@@ -6,6 +6,9 @@
     <RootNamespace>CrawfisSoftware.Noise</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>$(SolutionDir)Documentation\CrawfisSoftware.Noise.xml</DocumentationFile>
+    <Copyright>2025</Copyright>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
 </Project>
