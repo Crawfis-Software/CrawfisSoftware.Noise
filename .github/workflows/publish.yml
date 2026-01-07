@@ -16,7 +16,7 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-- name: Restore
+      - name: Restore
         run: dotnet restore CrawfisSoftware.Noise.csproj
 
       - name: Build
