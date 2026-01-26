@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -21,4 +22,20 @@
     <None Include="README.md" Pack="true" PackagePath="\" />
     <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
+  <PropertyGroup>
+    <PackageId>CrawfisSoftware.Noise</PackageId>
+    <Authors>Crawfis Software</Authors>
+    <Description>Implementation of some basic noise functions for PCG.</Description>
+    <RepositoryUrl>https://github.com/Crawfis-Software/CrawfisSoftware.Noise</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Crawfis-Software/CrawfisSoftware.Noise</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Please see CHANGELOG.md for release details.</PackageReleaseNotes>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
 </Project>
