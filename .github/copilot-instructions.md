@@ -12,7 +12,7 @@ When suggesting commit messages, PR titles, or release notes, always use **Conve
 
 If asked for a commit message, respond with a single Conventional Commit subject line only (no multi-line narrative), unless the user explicitly asks for a longer body.
 
-Do not propose non-Conventional subjects like "Disable …" or "Update …" without a `type:` prefix.
+Do not propose non-Conventional subjects like "Disable ï¿½" or "Update ï¿½" without a `type:` prefix.
 
 Examples:
 - `fix(ci): configure release-please`
