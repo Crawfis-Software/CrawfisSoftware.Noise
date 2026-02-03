@@ -30,15 +30,9 @@
       "extra-files": [
         {
           "type": "xml",
-          "path": "CrawfisSoftware.Tiling.csproj",
+          "path": "CrawfisSoftware.Noise.csproj",
           "xpath": "//Project/PropertyGroup/Version",
           "_comment": "Also update the `<Version>` element in the project file so the produced NuGet package version matches the release tag."
-        },
-        {
-          "type": "json",
-          "path": "Packages/com.crawfissoftware.tiling/package.json",
-          "jsonpath": "$.version",
-          "_comment": "Also update the Unity package version (`package.json` -> `version`) so the UPM package aligns with the release tag."
         }
       ]
     }
