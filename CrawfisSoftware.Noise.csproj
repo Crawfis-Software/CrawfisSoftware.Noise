@@ -19,8 +19,12 @@
     <TargetFrameworks>netstandard2.1;net8.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
+    <None Include=".husky\commit-msg" />
     <None Include="README.md" Pack="true" PackagePath="\" />
     <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".husky\_\" />
   </ItemGroup>
   <PropertyGroup>
     <PackageId>CrawfisSoftware.Noise</PackageId>
