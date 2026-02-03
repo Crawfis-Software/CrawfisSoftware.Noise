@@ -149,3 +149,35 @@ float[,] grid = noise.Calculate2DArray(128, 128, scale: 0.1f);
 ## Notes
 
 - This library focuses on lightweight sampling primitives. Any higher-level composition (octaves/fBm, domain warping, tiling, etc.) should be built on top of these samplers.
+
+## Helpers
+
+### `Turbulence`
+
+Static helper for generating turbulence from `SimplexNoise` by summing multiple octaves.
+
+Key points:
+
+- Works with 1D, 2D, and 3D simplex noise.
+- Octaves are summed using increasing frequency (`lacunarity`) and decreasing amplitude (`gain`).
+- Since `SimplexNoise.Sample(...)` returns values in `[0, 1]`, turbulence is computed from the signed remap: `abs(2*n - 1)`.
+
+API:
+
+- `float Turbulence.Sample(SimplexNoise noise, float x, int octaves = 4, float lacunarity = 2, float gain = 0.5f)`
+- `float Turbulence.Sample(SimplexNoise noise, float x, float y, int octaves = 4, float lacunarity = 2, float gain = 0.5f)`
+- `float Turbulence.Sample(SimplexNoise noise, float x, float y, float z, int octaves = 4, float lacunarity = 2, float gain = 0.5f)`
+
+Normalized variants (divide by total amplitude, producing values roughly in `[0, 1]`):
+
+- `float Turbulence.SampleNormalized(...)`
+
+Example:
+
+```csharp
+using CrawfisSoftware.Noise;
+
+var noise = new SimplexNoise();
+
+float t = Turbulence.SampleNormalized(noise, x: 1.25f, y: 4.5f, octaves: 6, lacunarity: 2.0f, gain: 0.5f);
+```
